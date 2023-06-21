@@ -17,6 +17,16 @@ body {
 }
 
 /* common */
+.break-all {
+  word-break: break-all;
+}
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -281,7 +291,7 @@ a {
 
 .popular {
   padding: 65px 0;
-  margin: 135px 0;
+  margin-top: 135px;
 }
 
 /* popular top */
@@ -369,7 +379,9 @@ a {
   justify-content: space-between;
 }
 
-.popular .head .title {
+.popular .head a {
+  padding-right: 6px;
+  --line-clamp: 1;
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 1.67;
@@ -390,6 +402,7 @@ a {
 }
 
 .popular .course-item .desc {
+  --line-clamp: 2;
   margin-top: 6px;
   font-weight: 400;
   font-size: 1.4rem;
@@ -420,4 +433,85 @@ a {
 .popular .foot .book-btn:hover {
   color: #ffffff;
   background: var(--primary-color);
+}
+
+/* FEEDBACK */
+.feedback {
+  margin-top: 135px;
+  padding: 96px 0;
+  background: #2e2100;
+}
+.feedback-list {
+  display: flex;
+  overflow: hidden;
+}
+.feedback-item {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* feedback left */
+
+.feedback .info .avatar {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.feedback .info .name {
+  font-family: var(--font-heading);
+  margin-top: 18px;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.42;
+  /* identical to box height, or 142% */
+  color: #f7f7f7;
+}
+
+.feedback .info .desc {
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  /* identical to box height, or 186% */
+  color: #bfbcb3;
+}
+
+.feedback-item .dots {
+  display: flex;
+  margin-top: 28px;
+}
+
+.feedback-item .dots .dot {
+  display: block;
+  margin-right: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+
+.feedback-item .dot.active {
+  background: #ffb900;
+  cursor: default;
+}
+
+/* feedback right */
+.feedback-item .content {
+  margin: 0;
+  width: 66%;
+  margin-left: auto;
+}
+.feedback-item .content blockquote {
+  font-style: italic;
+  display: block;
+  margin-left: 30px;
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 1.54;
+  /* or 154% */
+  color: #ffffff;
 }
