@@ -47,7 +47,6 @@ a {
 
 .btn {
   display: inline-block;
-  padding: 0 40px;
   min-width: 118px;
   line-height: 50px;
   font-weight: 600;
@@ -235,6 +234,7 @@ a {
 .content-block .cta-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-left: 1px;
   min-width: 180px;
   line-height: 64px;
@@ -582,7 +582,7 @@ a {
 .features .feature-2 {
   display: flex;
   justify-content: space-between;
-  margin: 135px 0;
+  margin-top: 135px;
   padding: 65px 0;
 }
 /* info */
@@ -600,4 +600,130 @@ a {
   height: 440px;
   border-radius: 20px;
   object-fit: cover;
+}
+
+/* BLOG */
+.blog {
+  margin-top: 135px;
+  padding: 96px 0;
+  background: #fffcf4;
+}
+
+.blog .blog-top {
+  text-align: center;
+}
+
+.blog .blog-top .heading {
+  font-size: 3.8rem;
+  font-weight: 700;
+}
+
+.blog .blog-top .desc {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 28px;
+  color: #696262;
+}
+
+/* blog-list */
+.blog .blog-list {
+  display: flex;
+  margin-top: 65px;
+  gap: 30px;
+  flex: 1;
+  /* slide blog */
+  overflow: hidden;
+}
+
+.blog .blog-list .blog-item {
+  border-radius: 16px;
+  background: #fff;
+  /* slide blog */
+  width: calc(33.3% - 20px);
+  flex-shrink: 0;
+}
+
+.blog .blog-list .blog-item:hover {
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.blog .blog-list .thumb {
+  object-position: 50% 30%;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.blog .blog-list .info {
+  padding: 20px 20px 28px;
+}
+
+.blog .blog-list .date {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 12px;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #5f5b53;
+}
+
+.blog .blog-list .date::before {
+  display: inline-block;
+  content: "";
+  margin-right: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+.blog .blog-list .date::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  height: 1px;
+  right: -27px;
+  bottom: 0;
+  left: 0;
+  border-radius: 0.5px;
+  background: #e2dfda;
+}
+
+.blog .blog-list .title {
+  margin: 12px 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+  color: #171100;
+}
+
+.blog .blog-list .btn {
+  font-size: 1.4rem;
+}
+
+.blog .blog-list .btn:hover {
+  background: var(--primary-color);
+}
+
+.blog .dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.blog .dots .dot {
+  display: block;
+  margin-right: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+
+.blog .dot.active {
+  background: #ffb900;
+  cursor: default;
 }
